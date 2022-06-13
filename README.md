@@ -11,11 +11,11 @@ Our illustrative package, ```otquickmodule```, includes two classes:
 - ```BayesianQuadratureWeighting```
 
 ## **0. Create a new environment**
-Before strating, creating a new environment for this occasion is highly recomanded to properly manage dependencies (we decided to name ours ```otqm_dev```). For more information, check-out the conda environnments documentation https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. 
+Before strating, creating a new environment for this occasion is highly recomanded to properly manage dependencies (we decided to name ours ```otqm_env```). For more information, check-out the conda environnments documentation https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. 
 
 ```python
-~$ conda create -n otqm_dev python=3.9
-~$ conda activate otqm
+~$ conda create -n otqm_env python=3.9
+~$ conda activate otqm_env
 ```
 
 Do not forget to activate this environment for all the following steps.
@@ -87,12 +87,16 @@ PACKAGE STRUCTURE (step 3)
 The ```setup.py``` is the most important file for installing your package. Note that the ```name``` defined here will be the name published on pypi. 
 
 ```python
+# coding: utf8
+"""
+Setup script for a Python package
+"""
 import os
 import re
 from setuptools import setup
 
 # Get the version from __init__.py
-path = os.path.join(os.path.dirname(__file__), 'otkerneldesign', '__init__.py')
+path = os.path.join(os.path.dirname(__file__), 'otquickmodule', '__init__.py')
 with open(path) as f:
     version_file = f.read()
 
@@ -141,10 +145,10 @@ At this step, you should be able to run the following commands without error. It
 ~/otquickmodule$ pip install -e .
 ```
 
-You can now import the module from anywhere with the Python interpreter of the ```otqm``` conda environment: 
+You can now import the module from anywhere with the Python interpreter of the ```otqm_env``` conda environment: 
 
 ``` python
-~$ conda activate otqm
+~$ conda activate otqm_env
 ~$ python 
 >>> import otquickmodule as otqm
 >>>
