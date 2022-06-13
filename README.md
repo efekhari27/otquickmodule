@@ -82,7 +82,7 @@ PACKAGE STRUCTURE (step 3)
 |    └── .gitignore
 ```
 
-## **4. Write a ```setup.py``` file**
+## **4. Write a ```setup.py``` file** and build
 
 The ```setup.py``` is the most important file for installing your package. Note that the ```name``` defined here will be the name published on pypi. 
 
@@ -182,10 +182,10 @@ At this step you can repeat the build and install commands from the previous ste
 
 ## **6. Build, distribute and publish**
 
-Create the source distribution of the package: (creates a tar gz archive in the ```dist``` repertory)
+Create the source distribution of the package: (creates a tar gz archive and the hosting ```dist``` repertory)
 
 ```bash
-~/otquickmodule$ pyton setup.py sdist
+~/otquickmodule$ pyton setup.py bdist_wheel sdist
 ```
 
 Check if it worked: (you should see the content of the archive) 
