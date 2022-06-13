@@ -51,7 +51,7 @@ Here is the recommended Python package structure, do not foget to place the ```_
 PACKAGE STRUCTURE (step 2)
 ==========================
 ├── otquickmodule
-|    ├── examples
+|    ├── example
 |    ├── test
 |    ├── src
 |    |   ├── __init__.py
@@ -71,8 +71,8 @@ PACKAGE STRUCTURE (step 2)
 PACKAGE STRUCTURE (step 3)
 ==========================
 ├── otquickmodule
-|    ├── examples
-|    ├── tests
+|    ├── example
+|    ├── test
 |    ├── src
 |    |   ├── __init__.py
 |    |   ├── QuadraturetWeighting.py
@@ -82,7 +82,7 @@ PACKAGE STRUCTURE (step 3)
 |    └── .gitignore
 ```
 
-## **4. Write a ```setup.py``` file** and build
+## **4. Write a ```setup.py``` file**
 
 The ```setup.py``` is the most important file for installing your package. Note that the ```name``` defined here will be the name published on pypi. 
 
@@ -116,7 +116,7 @@ setup(
     license='GPLv3+',
     keywords=['OpenTURNS', 'KernelHerding'],
     url="https://github.com/efekhari27/otquickmodule",
-    packages=['otquickmodule', 'tests'],
+    packages=['otquickmodule', 'test'],
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -163,7 +163,7 @@ PACKAGE STRUCTURE (step 5)
 |    ├── build
 |    |   ├── ...
 |    |   └── ...
-|    ├── examples
+|    ├── example
 |    |   └── kernel_herding_example.ipynb
 |    ├── test
 |    |   ├── TestQuadraturetWeighting.py
