@@ -1,10 +1,10 @@
 """otquickmodule module"""
 
 from .KernelHerding import KernelHerding
-from .BayesianQuadratureWeighting import BayesianQuadratureWeighting
+from .QuadratureWeighting import QuadratureWeighting
 
 __all__ = [
     "KernelHerding",
-    "BayesianQuadratureWeighting",
+    "QuadratureWeighting",
 ]
 __version__ = "0.0.1"

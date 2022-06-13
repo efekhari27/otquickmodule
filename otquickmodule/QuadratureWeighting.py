@@ -9,7 +9,7 @@ import openturns as ot
 import numpy as np
 
 
-class BayesianQuadraturetWeighting:
+class QuadratureWeighting:
     """
     Optimally-weighting a sample for probabilistic integration.
 

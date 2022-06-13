@@ -53,7 +53,7 @@ PACKAGE STRUCTURE (step 2)
 ├── otquickmodule
 |    ├── example
 |    ├── test
-|    ├── src
+|    ├── otquickmodule
 |    |   ├── __init__.py
 |    |   ├── BayesianQuadratureWeighting.py
 |    |   └── KernelHerding.py
@@ -73,7 +73,7 @@ PACKAGE STRUCTURE (step 3)
 ├── otquickmodule
 |    ├── example
 |    ├── test
-|    ├── src
+|    ├── otquickmodule
 |    |   ├── __init__.py
 |    |   ├── BayesianQuadratureWeighting.py
 |    |   └── KernelHerding.py
@@ -141,7 +141,7 @@ setup(
 At this step, you should be able to run the following commands without error. It will first create a ```build``` repertory with the sources of your package. Then, you can try to install the package locally (the option ```-e``` imposes a local install). 
 
 ```bash 
-~/otquickmodule$ pyton setup.py build_wheel
+~/otquickmodule$ pyton setup.py bdist_wheel
 ~/otquickmodule$ pip install -e .
 ```
 
@@ -172,7 +172,7 @@ PACKAGE STRUCTURE (step 5)
 |    ├── test
 |    |   ├── TestBayesianQuadratureWeighting.py
 |    |   └── TestKernelHerding.py
-|    ├── src
+|    ├── otquickmodule
 |    |   ├── __init__.py
 |    |   ├── BayesianQuadratureWeighting.py
 |    |   └── KernelHerding.py

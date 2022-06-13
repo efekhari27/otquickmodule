@@ -28,7 +28,7 @@ setup(
     version=version,
     author="Elias Fekhari",
     author_email="elias.fekhari@edf.fr",
-    description="This repository is a turorial for easy Python packaging",
+    description="This repository is a tutorial for quick Python packaging",
     license='GPLv3+',
     keywords=['OpenTURNS', 'KernelHerding'],
     url="https://github.com/efekhari27/otquickmodule",
