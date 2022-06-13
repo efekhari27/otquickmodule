@@ -8,7 +8,7 @@ To illustrate this tutorial, let's work on ditribution of a full Python package 
 Our illustrative package, ```otquickmodule```, includes two classes: 
 
 - ```KernelHerding```
-- ```BayesianQuadratureWeighting```
+- ```QuadratureWeighting```
 
 ## **0. Create a new environment**
 Before strating, creating a new environment for this occasion is highly recomanded to properly manage dependencies (we decided to name ours ```otqm_env```). For more information, check-out the conda environnments documentation https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. 
@@ -28,11 +28,11 @@ This file will allow the auto-completion your methods when using the package. No
 """otquickmodule module"""
 
 from .KernelHerding import KernelHerding
-from .BayesianQuadratureWeighting import BayesianQuadratureWeighting
+from .QuadratureWeighting import QuadratureWeighting
 
 __all__ = [
     "KernelHerding",
-    "BayesianQuadratureWeighting",
+    "QuadratureWeighting",
 ]
 __version__ = "0.0.1"
 ```
@@ -55,7 +55,7 @@ PACKAGE STRUCTURE (step 2)
 |    ├── test
 |    ├── otquickmodule
 |    |   ├── __init__.py
-|    |   ├── BayesianQuadratureWeighting.py
+|    |   ├── QuadratureWeighting.py
 |    |   └── KernelHerding.py
 ```
 
@@ -75,7 +75,7 @@ PACKAGE STRUCTURE (step 3)
 |    ├── test
 |    ├── otquickmodule
 |    |   ├── __init__.py
-|    |   ├── BayesianQuadratureWeighting.py
+|    |   ├── QuadratureWeighting.py
 |    |   └── KernelHerding.py
 |    ├── LICENSE
 |    ├── README.md
@@ -170,11 +170,11 @@ PACKAGE STRUCTURE (step 5)
 |    ├── example
 |    |   └── kernel_herding_example.ipynb
 |    ├── test
-|    |   ├── TestBayesianQuadratureWeighting.py
+|    |   ├── TestQuadratureWeighting.py
 |    |   └── TestKernelHerding.py
 |    ├── otquickmodule
 |    |   ├── __init__.py
-|    |   ├── BayesianQuadratureWeighting.py
+|    |   ├── TestQuadratureWeighting.py
 |    |   └── KernelHerding.py
 |    ├── LICENSE
 |    ├── README.md
