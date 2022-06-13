@@ -2,7 +2,7 @@
 """
 Test for KernelHerding class.
 """
-import otkerneldesign as otkd
+import otquickmodule as otqm
 import unittest
 import openturns as ot
 import openturns.testing as ott
@@ -16,7 +16,7 @@ class CheckKernelHerding(unittest.TestCase):
         ker_list = [ot.MaternModel([0.1], [1.0], 2.5)] * dimension
         kernel = ot.ProductCovarianceModel(ker_list)
 
-        kh = otkd.KernelHerding(
+        kh = otqm.KernelHerding(
             kernel=kernel,
             candidate_set_size=2 ** 12,
             distribution=distribution
