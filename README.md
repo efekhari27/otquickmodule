@@ -1,9 +1,8 @@
 # Easy Python Packaging *(7 steps to publish on PyPI)*
 
-
 This document aims at giving a quick tutorial for structuring, packaging, and publishing your Python package on https://pypi.org/.
 
-To illustrate this tutorial, let's work on ditribution of a full Python package called ```otquickmodule``` example, based on the following tutorial https://github.com/judy2k/publishing_python_packages_talk.  
+To illustrate this tutorial, let's work on distribution of a full Python package called ```otquickmodule``` example, based on the following tutorial https://github.com/judy2k/publishing_python_packages_talk. 
 
 Our illustrative package, ```otquickmodule```, includes two classes: 
 
@@ -11,7 +10,7 @@ Our illustrative package, ```otquickmodule```, includes two classes:
 - ```QuadratureWeighting```
 
 ## **0. Create a new environment**
-Before strating, creating a new environment for this occasion is highly recomanded to properly manage dependencies (we decided to name ours ```otqm_env```). For more information, check-out the conda environnments documentation https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. 
+Before strating, creating a new environment for this occasion is highly recommended to properly manage dependencies (we decided to name ours ```otqm_env```). For more information, check-out the conda environments documentation https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. 
 
 ```python
 ~$ conda create -n otqm_env python=3.9
@@ -31,21 +30,21 @@ from .KernelHerding import KernelHerding
 from .QuadratureWeighting import QuadratureWeighting
 
 __all__ = [
-    "KernelHerding",
-    "QuadratureWeighting",
+"KernelHerding",
+"QuadratureWeighting",
 ]
 __version__ = "0.0.1"
 ```
 
 ## **2. Create the package structure**
 
-Before creating the package structure, we recommand to follow a few good practices in Python: 
+Before creating the package structure, we recommend to follow a few good practices in Python: 
 
-- Avoid unecessary dependancies to simplify package maintenancy
+- Avoid unnecessary dependencies to simplify package maintenance
 - Follow the PEP 8 coding standards and use the package ```black``` to format your code according to PEP 8.
 - Write explicit docstrings on each method using the numpydoc syntax. This formalism will allow you to easily create a beautiful documentation in the future (e.g., https://efekhari27.github.io/otkerneldesign/master/) 
 
-Here is the recommended Python package structure, do not foget to place the ```__init__.py``` file in the by the two classes.
+Here is the recommended Python package structure, do not forget to place the ```__init__.py``` file in the by the two classes.
 
 ```
 PACKAGE STRUCTURE (step 2)
@@ -61,7 +60,7 @@ PACKAGE STRUCTURE (step 2)
 
 ## **3. Add license, readme and gitignore files**
 
-- The ```README.md``` file should describe the package and will appear on your github repository and your pypi page.  
+- The ```README.md``` file should describe the package and will appear on your github repository and your pypi page. 
 
 - To help you choosing a license: https://choosealicense.com/. In our case, we chose a GPL license in the form of the file ```LICENSE```.
 
@@ -98,43 +97,43 @@ from setuptools import setup
 # Get the version from __init__.py
 path = os.path.join(os.path.dirname(__file__), 'otquickmodule', '__init__.py')
 with open(path) as f:
-    version_file = f.read()
+version_file = f.read()
 
 version = re.search(r"^\s*__version__\s*=\s*['\"]([^'\"]+)['\"]",
-                    version_file, re.M)
+version_file, re.M)
 if version:
-    version = version.group(1)
+version = version.group(1)
 else:
-    raise RuntimeError("Unable to find version string.")
+raise RuntimeError("Unable to find version string.")
 
 # Long description
 with open("README.md", "r") as fh:
-    long_description = fh.read()
+long_description = fh.read()
 
 setup(
-    name="otquickmodule",
-    version=version,
-    author="Elias Fekhari",
-    author_email="elias.fekhari@edf.fr",
-    description="This repository is a turorial for easy Python packaging",
-    license='GPLv3+',
-    keywords=['OpenTURNS', 'KernelHerding'],
-    url="https://github.com/efekhari27/otquickmodule",
-    packages=['otquickmodule', 'test'],
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-        "Intended Audience :: Science/Research",
-        "Topic :: Software Development",
-        "Topic :: Scientific/Engineering",
-    ],
-    install_requires=[
-          "numpy",
-          "scipy", 
-          "openturns>=1.17"
-      ],
+name="otquickmodule",
+version=version,
+author="Elias Fekhari",
+author_email="elias.fekhari@edf.fr",
+description="This repository is a turorial for easy Python packaging",
+license='GPLv3+',
+keywords=['OpenTURNS', 'KernelHerding'],
+url="https://github.com/efekhari27/otquickmodule",
+packages=['otquickmodule', 'test'],
+long_description=long_description,
+long_description_content_type="text/markdown",
+classifiers=[
+"Programming Language :: Python :: 3",
+"License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+"Intended Audience :: Science/Research",
+"Topic :: Software Development",
+"Topic :: Scientific/Engineering",
+],
+install_requires=[
+"numpy",
+"scipy", 
+"openturns>=1.17"
+],
 )
 ```
 
