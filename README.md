@@ -141,7 +141,7 @@ setup(
 At this step, you should be able to run the following commands without error. It will first create a ```build``` repertory with the sources of your package. Then, you can try to install the package locally (the option ```-e``` imposes a local install). 
 
 ```bash 
-~/otquickmodule$ pyton setup.py bdist_wheel
+~/otquickmodule$ python setup.py bdist_wheel
 ~/otquickmodule$ pip install -e .
 ```
 
@@ -189,7 +189,7 @@ At this step you can repeat the build and install commands from the previous ste
 Create the source distribution of the package: (creates a tar gz archive and the hosting ```dist``` repertory)
 
 ```bash
-~/otquickmodule$ pyton setup.py bdist_wheel sdist
+~/otquickmodule$ python setup.py bdist_wheel sdist
 ```
 
 Check if it worked: (you should see the content of the archive) 
