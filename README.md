@@ -42,9 +42,9 @@ Before creating the package structure, we recommend to follow a few good practic
 
 - Avoid unnecessary dependencies to simplify package maintenance
 - Follow the PEP 8 coding standards and use the package ```black``` to format your code according to PEP 8.
-- Write explicit docstrings on each method using the numpydoc syntax. This formalism will allow you to easily create a beautiful documentation in the future (e.g., https://efekhari27.github.io/otkerneldesign/master/) 
+- Write explicit docstrings on each method using the numpydoc syntax. This formalism will allow you to easily create a nice documentation in the future (e.g., https://efekhari27.github.io/otkerneldesign/master/) 
 
-Here is the recommended Python package structure, do not forget to place the ```__init__.py``` file in the by the two classes.
+Here is the recommended Python package structure, do not forget to place the ```__init__.py``` file along your classes.
 
 ```
 PACKAGE STRUCTURE (step 2)
