@@ -173,7 +173,7 @@ PACKAGE STRUCTURE (step 5)
 |    |   └── TestKernelHerding.py
 |    ├── otquickmodule
 |    |   ├── __init__.py
-|    |   ├── TestQuadratureWeighting.py
+|    |   ├── QuadratureWeighting.py
 |    |   └── KernelHerding.py
 |    ├── LICENSE
 |    ├── README.md
