@@ -97,25 +97,25 @@ from setuptools import setup
 # Get the version from __init__.py
 path = os.path.join(os.path.dirname(__file__), 'otquickmodule', '__init__.py')
 with open(path) as f:
-version_file = f.read()
+  version_file = f.read()
 
 version = re.search(r"^\s*__version__\s*=\s*['\"]([^'\"]+)['\"]",
 version_file, re.M)
 if version:
-version = version.group(1)
+  version = version.group(1)
 else:
-raise RuntimeError("Unable to find version string.")
+  raise RuntimeError("Unable to find version string.")
 
 # Long description
 with open("README.md", "r") as fh:
-long_description = fh.read()
+  long_description = fh.read()
 
 setup(
 name="otquickmodule",
 version=version,
 author="Elias Fekhari",
 author_email="elias.fekhari@edf.fr",
-description="This repository is a turorial for easy Python packaging",
+description="This repository is a tutorial for easy Python packaging",
 license='GPLv3+',
 keywords=['OpenTURNS', 'KernelHerding'],
 url="https://github.com/efekhari27/otquickmodule",
